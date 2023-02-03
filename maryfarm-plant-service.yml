@@ -11,6 +11,10 @@ eureka:
 spring:
   application:
     name: maryfarm-plant-service
+  redis:
+    host: 172.26.2.9
+    port: 6379
+    timeout: 6
   rabbitmq:
     host: 172.26.2.9
     port: 5672
@@ -54,21 +58,6 @@ cloud:
       auto: false
     stack:
       auto: false
-
-springdoc:
-  swagger-ui:
-    path: /swagger-ui.html
-    groups-order: DESC
-    operationsSorter: method
-    disable-swagger-default-url: true
-    display-request-duration: true
-  api-docs:
-    path: /api-docs
-  show-actuator: true
-  default-consumes-media-type: application/json
-  default-produces-media-type: application/json
-  paths-to-match:
-    - /api/**
 
 management:
   endpoints:
